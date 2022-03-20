@@ -1,5 +1,5 @@
 [package]
-name = "collections_literals"
+name = "collection_literals"
 version = "1.0.0"
 edition = "2021"
 description = "Easy-to-use macroses for defining std::collections"
