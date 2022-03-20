@@ -40,4 +40,3 @@ macro_rules! btree {
         std::collections::BTreeSet::from([$($v,)*])
     }};
 }
-

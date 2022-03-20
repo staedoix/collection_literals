@@ -1,6 +1,6 @@
 use std::collections::{BTreeMap, BTreeSet};
 
-use collections_literals::{btree, collection};
+use collection_literals::{btree, collection};
 
 #[test]
 fn it_should_create_defaults() {
@@ -24,8 +24,7 @@ fn it_should_properly_create_sets() {
     assert_eq!(tested_set, desired_set);
 }
 
-fn is_prime<T: Into<i64>>(number: T) -> bool
-{
+fn is_prime<T: Into<i64>>(number: T) -> bool {
     let number = number.into();
     let float = number as f64;
     let s = float.sqrt().trunc() as i64;

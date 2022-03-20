@@ -1,5 +1,6 @@
 use std::collections::{HashMap, HashSet};
-use collections_literals::{collection, hash};
+
+use collection_literals::{collection, hash};
 
 #[test]
 fn it_should_create_defaults() {
@@ -23,8 +24,7 @@ fn it_should_properly_create_sets() {
     assert_eq!(tested_set, desired_set);
 }
 
-fn is_prime<T: Into<i64>>(number: T) -> bool
-{
+fn is_prime<T: Into<i64>>(number: T) -> bool {
     let number = number.into();
     let float = number as f64;
     let s = float.sqrt().trunc() as i64;
