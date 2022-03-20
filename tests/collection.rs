@@ -1,5 +1,6 @@
-use collection_literals::collection;
 use std::collections::{BTreeMap, BTreeSet, HashMap, HashSet};
+
+use collection_literals::collection;
 
 #[test]
 fn it_should_create_defaults() {

@@ -21,6 +21,10 @@ macro_rules! hash {
     }};
 
     // set-like
+    (key $vt:ty, $($v:expr),* $(,)?) => {{
+        std::collections::HashSet::<$vt>::from([$($v,)*])
+    }};
+    
     ($($v:expr),* $(,)?) => {{
         std::collections::HashSet::from([$($v,)*])
     }};
