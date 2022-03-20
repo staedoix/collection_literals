@@ -6,6 +6,7 @@ description = "Easy-to-use macroses for defining std::collections"
 readme = "README.md"
 repository = "https://github.com/vna2rexlnt/collection_literals"
 license = "MIT"
+exclude = [".idea"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
