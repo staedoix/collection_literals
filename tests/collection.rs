@@ -18,6 +18,22 @@ fn it_should_create_defaults() {
 
     let btree_map: BTreeMap<u8, bool> = collection! {};
     assert_eq!(btree_map, BTreeMap::<u8, bool>::default());
+
+
+    let vector = collection!(Vec<u8>);
+    assert_eq!(vector, Vec::<u8>::default());
+
+    let hash_set = collection!(HashSet<u8>);
+    assert_eq!(hash_set, HashSet::<u8>::default());
+
+    let btree_set = collection!(BTreeSet<u8>);
+    assert_eq!(btree_set, BTreeSet::<u8>::default());
+
+    let hash_map = collection!(HashMap<u8, bool>);
+    assert_eq!(hash_map, HashMap::<u8, bool>::default());
+
+    let btree_map = collection!(BTreeMap<u8, bool>);
+    assert_eq!(btree_map, BTreeMap::<u8, bool>::default());
 }
 
 #[test]

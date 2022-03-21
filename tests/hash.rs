@@ -19,7 +19,6 @@ fn it_should_create_defaults() {
         }
     }
 
-
     let map0: HashMap<u8, bool> = hash! {};
     let map1 = hash! { map of u8 => bool };
     let map2 = hash! { map of u8 => bool {} };
