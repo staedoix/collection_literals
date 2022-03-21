@@ -5,21 +5,19 @@ macro_rules! collection {
     }};
 
     // map-like
-    // TODO: Fix
-    // ($collection_type:ty { $($key:expr => $value:expr),* $(,)? }) => {{
-    //     let temp: $collection_type = core::convert::From::from([$(($key, $value),)*]);
-    //     temp
-    // }};
+    ($collection_type:ty; $($key:expr => $value:expr),* $(,)?) => {{
+        let temp: $collection_type = core::convert::From::from([$(($key, $value),)*]);
+        temp
+    }};
     ($($key:expr => $value:expr),* $(,)?) => {{
         core::convert::From::from([$(($key, $value),)*])
     }};
 
     // set-like
-    // TODO: Fix
-    // ($collection_type:ty { $($value:expr),* $(,)? }) => {{
-    //     let temp: $collection_type = core::convert::From::from([$(($value),)*]);
-    //     temp
-    // }};
+    ($collection_type:ty; $($value:expr),* $(,)?) => {{
+        let temp: $collection_type = core::convert::From::from([$($value,)*]);
+        temp
+    }};
     ($($value:expr),* $(,)?) => {{
         core::convert::From::from([$($value,)*])
     }};
