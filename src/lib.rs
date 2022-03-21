@@ -23,6 +23,25 @@ macro_rules! collection {
     }};
 }
 
+/// Macros for initializing both HashMaps and HashSets.
+/// It can infer both type of collection and types of entries but you can provide explicit type annotations.
+/// ```rust
+/// use std::collections::{HashMap, HashSet};
+/// use collection_literals::hash;
+/// let set = hash! { set of &str { "Hi", "Hoi" } };
+/// let map = hash! { map of u8 => char {
+///     0 => '0',
+///     1 => '1',
+///     2 => '2',
+/// }};
+///
+/// assert_eq!(set, HashSet::from(["Hi", "Hoi"]));
+/// assert_eq!(map, HashMap::from([(0, '0'), (1, '1'), (2, '2')]));
+///
+///
+/// assert_eq!(hash! { 88, 99 }, hash! { set of i32 { 88, 99 } });
+/// assert_eq!(hash! { 88 => 99 }, hash! { set of i32 => i32 { 88 => 99 } });
+///```
 #[macro_export]
 macro_rules! hash {
     () => {{ collection!{} }};
@@ -50,6 +69,25 @@ macro_rules! hash {
     }};
 }
 
+/// Macros for initializing both BTreeMaps and BTreeSets.
+/// It can infer both type of collection and types of entries but you can provide explicit type annotations.
+/// ```rust
+/// use std::collections::{BTreeMap, BTreeSet};
+/// use collection_literals::btree;
+/// let set = btree! { set of &str { "Hi", "Hoi" } };
+/// let map = btree! { map of u8 => char {
+///     0 => '0',
+///     1 => '1',
+///     2 => '2',
+/// }};
+///
+/// assert_eq!(set, BTreeSet::from(["Hi", "Hoi"]));
+/// assert_eq!(map, BTreeMap::from([(0, '0'), (1, '1'), (2, '2')]));
+///
+///
+/// assert_eq!(btree! { 88, 99 }, btree! { set of i32 { 88, 99 } });
+/// assert_eq!(btree! { 88 => 99 }, btree! { set of i32 => i32 { 88 => 99 } });
+///```
 #[macro_export]
 macro_rules! btree {
     () => {{ collection!{} }};

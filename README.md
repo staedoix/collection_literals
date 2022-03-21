@@ -1,5 +1,9 @@
 # Collection Literals
 
+<a href="https://crates.io/crates/collection_literals">
+    <img src="https://img.shields.io/crates/v/collection_literals">
+</a>
+
 Simple library for convenient collection initialization.
 
 ### Using `collection!` macros:
