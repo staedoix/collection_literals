@@ -84,3 +84,22 @@ fn it_should_properly_create_maps() {
     };
     assert_eq!(tested_map, desired_map);
 }
+
+#[test]
+fn it_should_create_the_same_sets_with_various_syntax() {
+    let set1 = btree! { set of u8 };
+    let set2 = btree!(set of u8);
+    let set3 = btree![set of u8];
+
+    let set4 = btree! { of u8 };
+    let set5 = btree!(of u8);
+    let set6 = btree![of u8];
+
+    let sets = vec![set1, set2, set3, set4, set5, set6];
+
+    for i in 0..sets.len() {
+        for j in i..sets.len() {
+            assert_eq!(sets[i], sets[j])
+        }
+    }
+}
