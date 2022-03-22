@@ -40,7 +40,7 @@ macro_rules! collection {
 ///
 ///
 /// assert_eq!(hash! { 88, 99 }, hash! { set of i32 { 88, 99 } });
-/// assert_eq!(hash! { 88 => 99 }, hash! { set of i32 => i32 { 88 => 99 } });
+/// assert_eq!(hash! { 88 => 99 }, hash! { map of i32 => i32 { 88 => 99 } });
 ///```
 #[macro_export]
 macro_rules! hash {
@@ -86,7 +86,7 @@ macro_rules! hash {
 ///
 ///
 /// assert_eq!(btree! { 88, 99 }, btree! { set of i32 { 88, 99 } });
-/// assert_eq!(btree! { 88 => 99 }, btree! { set of i32 => i32 { 88 => 99 } });
+/// assert_eq!(btree! { 88 => 99 }, btree! { map of i32 => i32 { 88 => 99 } });
 ///```
 #[macro_export]
 macro_rules! btree {
@@ -100,7 +100,7 @@ macro_rules! btree {
         std::collections::BTreeMap::from([$(($key, $value),)*])
     }};
     ($(map)? of $key_type:ty => $value_type:ty { $($key:expr => $value:expr),* $(,)? }) => {{
-        std::collections::BTreeMap::<$key_type, $value_type>::from([$($key, $value)*])
+        std::collections::BTreeMap::<$key_type, $value_type>::from([$(($key, $value),)*])
     }};
 
     // set-like
