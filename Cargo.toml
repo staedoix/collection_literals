@@ -2,7 +2,7 @@
 name = "collection_literals"
 version = "1.0.0-rc1"
 edition = "2021"
-description = "Easy-to-use macroses for defining std::collections"
+description = "Easy-to-use macros for initializing std::collections"
 readme = "README.md"
 repository = "https://github.com/vna2rexlnt/collection_literals"
 license = "MIT"

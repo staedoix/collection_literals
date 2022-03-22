@@ -6,7 +6,7 @@
 
 Simple library for convenient collection initialization.
 
-### Using `collection!` macros:
+### Using `collection!` macro:
 
 ```rust
 use collection_literals::collection;
@@ -49,7 +49,7 @@ fn main() {
 }
 ```
 
-### Using `hash!` macros:
+### Using `hash!` macro:
 
 ```rust
 use collection_literals::hash;
@@ -99,7 +99,7 @@ fn main() {
 }
 ```
 
-### Using `btree!` macros:
+### Using `btree!` macro:
 
 ```rust
 use collection_literals::btree;
