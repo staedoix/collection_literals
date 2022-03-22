@@ -1,3 +1,16 @@
+/// Macro for initializing any collection.
+/// You must explicitly specify type of collection.
+/// ```rust
+/// use std::collections::LinkedList;
+/// use std::fs::File;
+/// use collection_literals::collection;
+///
+/// let linked_list: LinkedList<String> = collection! { "Hello".to_string(), "Hallo".to_string() };
+/// assert_eq!(linked_list, LinkedList::from(["Hello".to_string(), "Hallo".to_string()]));
+///
+/// let linked_list = collection! { LinkedList::<&str>; "Bonjour", "Здравствуй" };
+/// assert_eq!(linked_list, LinkedList::from(["Bonjour", "Здравствуй"]));
+/// ```
 #[macro_export]
 macro_rules! collection {
     ($collection_type:ty) => {{
@@ -23,11 +36,12 @@ macro_rules! collection {
     }};
 }
 
-/// Macros for initializing both HashMaps and HashSets.
+/// Macro for initializing both HashMaps and HashSets.
 /// It can infer both type of collection and types of entries but you can provide explicit type annotations.
 /// ```rust
 /// use std::collections::{HashMap, HashSet};
 /// use collection_literals::hash;
+///
 /// let set = hash! { set of &str { "Hi", "Hoi" } };
 /// let map = hash! { map of u8 => char {
 ///     0 => '0',
@@ -69,11 +83,12 @@ macro_rules! hash {
     }};
 }
 
-/// Macros for initializing both BTreeMaps and BTreeSets.
+/// Macro for initializing both BTreeMaps and BTreeSets.
 /// It can infer both type of collection and types of entries but you can provide explicit type annotations.
 /// ```rust
 /// use std::collections::{BTreeMap, BTreeSet};
 /// use collection_literals::btree;
+///
 /// let set = btree! { set of &str { "Hi", "Hoi" } };
 /// let map = btree! { map of u8 => char {
 ///     0 => '0',
