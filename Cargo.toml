@@ -1,6 +1,6 @@
 [package]
 name = "collection_literals"
-version = "1.0.0-2"
+version = "1.0.0-rc1"
 edition = "2021"
 description = "Easy-to-use macroses for defining std::collections"
 readme = "README.md"
