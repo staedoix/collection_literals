@@ -93,8 +93,8 @@ fn main() {
     };
 
     let hash_set: HashSet<u8> = hash! { 1, 2, 3 };
-    let hash_set = hash! { set of { 1, 2, 3 } };
-    let hash_set = hash! { of { 1, 2, 3 } };
+    let hash_set = hash! { set of u8 { 1, 2, 3 } };
+    let hash_set = hash! { of u8 { 1, 2, 3 } };
     let hash_set = hash! { 1_u8, 2_u8, 3_u8 };
 }
 ```
@@ -143,8 +143,8 @@ fn main() {
     };
 
     let btree_set: BTreeSet<u8> = btree! { 1, 2, 3 };
-    let btree_set = btree! { set of { 1, 2, 3 } };
-    let btree_set = btree! { of { 1, 2, 3 } };
+    let btree_set = btree! { set of u8 { 1, 2, 3 } };
+    let btree_set = btree! { of u8 { 1, 2, 3 } };
     let btree_set = btree! { 1_u8, 2_u8, 3_u8 };
 }
 ```
