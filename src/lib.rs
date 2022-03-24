@@ -2,7 +2,6 @@
 /// You must explicitly specify type of collection.
 /// ```rust
 /// use std::collections::LinkedList;
-/// use std::fs::File;
 /// use collection_literals::collection;
 ///
 /// let linked_list: LinkedList<String> = collection! { "Hello".to_string(), "Hallo".to_string() };
