@@ -6,7 +6,9 @@
 
 Simple library for convenient collection initialization.
 
-### Using `collection!` macro:
+## `collection!` macro
+
+Macro for initializing collections of any type.
 
 ```rust
 use collection_literals::collection;
@@ -49,7 +51,10 @@ fn main() {
 }
 ```
 
-### Using `hash!` macro:
+## `hash!` macro
+
+Macro for initializing both HashMaps and HashSets. It can infer both type of collection and types of entries, but you
+can provide explicit type annotations.
 
 ```rust
 use collection_literals::hash;
@@ -99,7 +104,10 @@ fn main() {
 }
 ```
 
-### Using `btree!` macro:
+## `btree!` macro:
+
+Macro for initializing both BTreeMaps and BTreeSets. It can infer both type of collection and types of entries, but you
+can provide explicit type annotations.
 
 ```rust
 use collection_literals::btree;

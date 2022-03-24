@@ -1,5 +1,5 @@
-/// Macro for initializing any collection.
-/// You must explicitly specify type of collection.
+/// Macro for initializing collections of any type.
+/// You must specify type of collection.
 /// ```rust
 /// use std::collections::LinkedList;
 /// use collection_literals::collection;
