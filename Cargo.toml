@@ -1,6 +1,6 @@
 [package]
 name = "collection_literals"
-version = "1.0.2"
+version = "1.0.3"
 edition = "2021"
 description = "Easy-to-use macros for initializing any collection"
 readme = "README.md"
@@ -8,19 +8,7 @@ repository = "https://github.com/staedoix/collection_literals"
 license = "MIT"
 keywords = ["literal", "macro", "hashmap", "collection", "maplit"]
 categories = ["rust-patterns"]
-exclude = [
-  "!/src",
-  "!/tests",
-  "!/README.md",
-  "/.github/",
-  "/.idea/",
-  "/.vscode/",
-  "/nix",
-  "/flake.nix",
-  "/flake.lock",
-  ".envrc",
-  ".gitignore",
-]
+include = ["/src/", "/tests/", "/README.md", "/LICENSE"]
 
 [badges]
 maintenance.status = "passively-maintained"
